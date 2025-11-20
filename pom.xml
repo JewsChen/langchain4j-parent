@@ -10,14 +10,19 @@
     </parent>
 
     <groupId>com.test.langchain</groupId>
-    <artifactId>langchain4j-test</artifactId>
+    <artifactId>langchain4j-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>langchain4j-test</name>
-    <description>langchain4j-test</description>
+    <packaging>pom</packaging>
+    <name>langchain4j-parent</name>
+    <description>langchain4j-parent</description>
+
+    <modules>
+        <module>easy-json-sdk</module>
+        <module>langchain4j</module>
+    </modules>
 
     <properties>
         <java.version>17</java.version>
-        <langchain4j.version>1.8.0</langchain4j.version>
     </properties>
 
     <dependencies>
@@ -36,18 +41,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <!-- 基于open-ai的langchain4j接口：ChatGPT、deepseek都是open-ai标准下的大模型 -->
-        <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-open-ai</artifactId>
-            <version>${langchain4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j</artifactId>
-            <version>${langchain4j.version}</version>
         </dependency>
     </dependencies>
 

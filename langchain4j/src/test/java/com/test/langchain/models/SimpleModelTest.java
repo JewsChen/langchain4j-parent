@@ -24,7 +24,7 @@ public class SimpleModelTest {
         );
         userMessage.attributes().put("name", "张三");
         ChatResponse chatResponse = openAiChatModel.chat(userMessage);
-        System.out.println(chatResponse.aiMessage());
-
+        System.out.println(chatResponse.aiMessage().text());
+        System.out.println(chatResponse.aiMessage().attributes());
     }
 }
